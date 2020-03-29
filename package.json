@@ -1,0 +1,49 @@
+{
+  "name": "api-web-app",
+  "version": "1.0.0",
+  "description": "A basic Node.js API/WEB application.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test --no-verify",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyce/node-api-web-app.git"
+  },
+  "keywords": [
+    "node",
+    "api",
+    "web"
+  ],
+  "author": "Niklas Olsson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyce/node-api-web-app/issues"
+  },
+  "homepage": "https://github.com/hoyce/node-api-web-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.6"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "nodemon": "^2.0.2",
+    "prettier": "2.0.2"
+  },
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 120
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  }
+}
